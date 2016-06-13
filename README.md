@@ -5,4 +5,4 @@ The functionalities are implemented via a range of technologies, such as Spring 
 
 ### Modules
 #### boot-service-api 
-The module of boot-service-api mainly offers RESTful APIs which developed in Spring Boot.
+The module of boot-service-api mainly offers RESTful APIs, which would be consumed by front-end pages, developed in Spring Boot.
