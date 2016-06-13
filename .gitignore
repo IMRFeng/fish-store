@@ -1,3 +1,12 @@
+#############
+## NodeJS
+#############
+
+*/node_modules/
+*/typings/
+*/dist/
+*/coverage/
+
 #################
 ## Eclipse
 #################
@@ -11,6 +20,7 @@ workspace/
 bin/
 tmp/
 *.tmp
+*.zip
 *.bak
 *.swp
 *~.nib
