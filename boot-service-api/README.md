@@ -9,6 +9,8 @@ Your local machine must be installed JRE 8 or JDK 8 to run this app successfully
 Using `java -version` to check your JDK version.
 
 
-## To Run
+## To Build
+`mvn clean install` or use command `mvn clean install -Dmaven.test.skip=true` or `mvn clean install -DskipTests` to skip all unit tests.
 
-execute `mvn clean install` then run `java -jar PROJECT_ROOT_PATH/target/service-api-*.jar`
+## To Run 
+`mvn spring-boot:run` or `java -jar PROJECT_ROOT_PATH/target/service-api-*.jar`
