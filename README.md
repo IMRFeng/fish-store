@@ -6,3 +6,6 @@ The functionalities are implemented via a range of technologies, such as Spring 
 ### Modules
 #### boot-service-api 
 The module of boot-service-api mainly offers RESTful APIs, which would be consumed by front-end pages, developed in Spring Boot.
+
+#### [angular2-frontend](https://github.com/IVictorFeng/fish-store/tree/master/angular2-frontend)
+This module primarily focused on providing an easy to use and accessible user interface so as to end users can manipulate or manage their data whenever they want.
