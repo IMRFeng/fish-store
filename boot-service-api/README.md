@@ -1,4 +1,4 @@
-# service-api
+# boot-service-api
 This module is mainly used for offering RESTful APIs to the front-end pages.
 
 Used technologies, like Java 8, Spring Boot, Junit, Mockito, Maven, and hsqldb etc., in this module.
