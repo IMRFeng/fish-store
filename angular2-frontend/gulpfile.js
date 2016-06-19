@@ -9,11 +9,15 @@ var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var KarmaServer = require('karma').Server;
 var rimraf = require('gulp-rimraf');
+var history = require('connect-history-api-fallback');
 
 var serverOptions = {
   root: '',
   port: 8000,
   livereload: true,
+  middleware: function(connect, opt) {
+    return [history({})];
+  }
 };
 
 var srcPath = 'src/app';

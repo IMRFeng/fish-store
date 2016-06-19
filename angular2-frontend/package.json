@@ -40,6 +40,7 @@
     "zone.js": "0.6.12"
   },
   "devDependencies": {
+    "connect-history-api-fallback": "^1.2.0",
     "eslint": "^2.12.0",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.0.0",
