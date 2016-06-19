@@ -5,10 +5,13 @@ Used technologies, like Java 8, Spring Boot, Junit, Mockito, Maven, and hsqldb e
 
 
 ## Prerequisite
-Your local machine must be installed JRE 8 or JDK 8 to run this app successfully.
-Using `java -version` to check your JDK version.
+Your local machine must be installed JRE/JDK 8 and Maven 3.* to run this app successfully.
+
+Using `java -version` and `mvn -v` to check your JDK and Maven versions respectively.
 
 
-## To Run
+## To Build
+`mvn clean install` or use command `mvn clean install -Dmaven.test.skip=true` or `mvn clean install -DskipTests` to skip all unit tests.
 
-execute `mvn clean install` then run `java -jar PROJECT_ROOT_PATH/target/service-api-*.jar`
+## To Run 
+`mvn spring-boot:run` or `java -jar PROJECT_ROOT_PATH/target/service-api-*.jar`
