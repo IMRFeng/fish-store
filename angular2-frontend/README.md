@@ -11,7 +11,7 @@ Technologies used in this module includes ES6, Angular2(RC1 version), Karma, Jas
 ## To Test
 `npm run test`
 
-# To Show Test Reports
+## To Show Test Reports
 `npm run coverage`
 
 ## To Clean
