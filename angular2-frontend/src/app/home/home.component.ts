@@ -4,7 +4,8 @@ import { Component } from '@angular/core';
     moduleId: module.id,
     selector: 'fs-home',
     templateUrl: './home.component.html',
-    styleUrls: ['./home.css','https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css']
+    styleUrls: ['./home.css']
 })
 export class HomeComponent {
+    greeting: string = 'Welcome to our fantastic Fish Store!';
 }
