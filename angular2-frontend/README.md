@@ -2,6 +2,9 @@
 
 Technologies used in this module includes ES6, Angular2(RC1 version), Karma, Jasmine, and Gulp etc.
 
+#Prerequisite
+In this module, all of data are fetched from database via RESTful APIs, for more details please refer to [boot-service-api](https://github.com/IVictorFeng/fish-store/tree/master/boot-service-api)
+
 ## To Install
 `npm install`
 
