@@ -7,5 +7,6 @@ CREATE TABLE Fish (
   description VARCHAR(1000),
   price DOUBLE NOT NULL,
   status VARCHAR(20),
+	star_rating DOUBLE,
   PRIMARY KEY (id)
 );

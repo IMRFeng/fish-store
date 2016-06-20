@@ -32,17 +32,21 @@ public class Fish implements Serializable {
 	private Double price;
 	/** The status **/
 	private String status;
+	/** The star rating */
+	@Column(name="star_rating")
+	private Double starRating = 0.0;
 
 	public Fish() {
 	}
 
-	public Fish(Long id, String fishName, String imgUrl, String desc, Double price, String status) {
+	public Fish(Long id, String fishName, String imgUrl, String desc, Double price, String status, Double starRating) {
 		this.id = id;
 		this.name = fishName;
 		this.imageUrl = imgUrl;
 		this.desc = desc;
 		this.price = price;
 		this.status = status;
+		this.starRating = starRating;
 	}
 
 	public Long getId() {
@@ -91,6 +95,14 @@ public class Fish implements Serializable {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public Double getStarRating() {
+		return this.starRating;
+	}
+	
+	public void setStarRating(Double starRating) {
+		this.starRating = starRating;
 	}
 
 	/**
