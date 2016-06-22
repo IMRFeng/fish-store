@@ -71,6 +71,7 @@ public class FishesController {
      * @return A ResponseEntity containing a single Fish object, if found,
      *         and a HTTP status code as described in the method comment.
      */
+    @CrossOrigin
 	@RequestMapping(value = "/api/fishes/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Fish> getFish(@PathVariable("id") long id) {
 		logger.info("Fetching Fish with id " + id);
@@ -96,6 +97,7 @@ public class FishesController {
      * @return A ResponseEntity containing a single Fish object, if created successfully, 
      * 			and a HTTP status code as described in the method comment.
      */
+    @CrossOrigin
 	@RequestMapping(value = "/api/fishes", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Fish> createFish(@RequestBody Fish fish, UriComponentsBuilder ucBuilder) {
 		logger.info("Creating Fish " + fish.getName());
@@ -124,6 +126,7 @@ public class FishesController {
      * @return A ResponseEntity containing a single Fish object, if updated successfully, 
      *         and a HTTP status code as described in the method comment.
      */
+    @CrossOrigin
 	@RequestMapping(value = "/api/fishes/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Fish> updateFish(@RequestBody Fish fish) {
 		logger.info("Updating Fish " + fish.getId());
@@ -153,6 +156,7 @@ public class FishesController {
      * @return A ResponseEntity with an empty response body and a HTTP status
      *         code as described in the method comment.
      */
+    @CrossOrigin
 	@RequestMapping(value = "/api/fishes/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Fish> deleteFish(@PathVariable("id") Long id) {
 		logger.info("Deleting Fish with id " + id);
@@ -178,6 +182,7 @@ public class FishesController {
      * @return A ResponseEntity with an empty response body and a HTTP status
      *         code as described in the method comment.
      */
+    @CrossOrigin
 	@RequestMapping(value = "/api/fishes", method = RequestMethod.DELETE)
 	public ResponseEntity<Fish> deleteAllFishes() {
 		logger.info("Deleting All Fishes");
