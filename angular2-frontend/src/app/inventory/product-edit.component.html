@@ -1,0 +1,85 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    {{pageTitle}}
+  </div>
+
+  <div class="panel-body" *ngIf="product">
+    <form class="form-horizontal" [ngFormModel]="editForm" (ngSubmit)="saveProduct()">
+      <fieldset>
+        <div class="form-group" [ngClass]="{'has-error': formError.name }">
+          <label class="col-md-2 control-label" for="inputProductName">Product Name</label>
+
+          <div class="col-md-8">
+            <input class="form-control" id="inputProductName" type="text" placeholder="Name (required)" ngControl="name" />
+            <span class="help-block" *ngIf="formError.name">
+                {{formError.name}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error': formError.price }">
+          <label class="col-md-2 control-label" for="inputPrice">Price</label>
+
+          <div class="col-md-8">
+            <input class="form-control" id="inputPrice" type="text" placeholder="Price (required)" ngControl="price" />
+            <span class="help-block" *ngIf="formError.price">
+                {{formError.price}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error': formError.imageUrl }">
+          <label class="col-md-2 control-label" for="inputImageUrl">Image Url</label>
+
+          <div class="col-md-8">
+            <input class="form-control" id="inputImageUrl" type="text" placeholder="Image Url (required)" ngControl="imageUrl" />
+            <span class="help-block" *ngIf="formError.imageUrl">
+                {{formError.imageUrl}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error': formError.starRating}">
+          <label class="col-md-2 control-label" for="inputStarRating">Star Rating (1-5)</label>
+
+          <div class="col-md-8">
+            <input class="form-control" id="inputStarRating" type="text" placeholder="Rating" ngControl="starRating" />
+            <span class="help-block" *ngIf="formError.starRating">
+                {{formError.starRating}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group" [ngClass]="{'has-error': formError.desc}">
+          <label class="col-md-2 control-label" for="inputProductDescription">Description {{editForm.valid}}</label>
+
+          <div class="col-md-8">
+            <textarea class="form-control" id="inputProductDescription" placeholder="Description" rows=3 ngControl="desc"></textarea>
+            <span class="help-block" *ngIf="formError.desc">
+                {{ formError.desc}}
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-md-4 col-md-offset-2">
+            <span>
+                <button class="btn btn-primary" type="submit"
+                        style="width:80px;margin-right:10px"
+                        [disabled]='!editForm.valid'>
+                    Save
+                </button>
+            </span>
+            <span>
+                <a class="btn btn-default" style="width:80px"
+                    [routerLink]="['/inventory']">
+                    Cancel
+                </a>
+            </span>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+</div>

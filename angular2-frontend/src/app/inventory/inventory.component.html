@@ -47,7 +47,7 @@
               <ai-star [rating]='product.starRating' (ratingClicked)='onRatingClicked($event)'></ai-star>
             </td>
             <td>
-              <button (click)="updateProduct(product.id)" class="btn btn-primary" title="Update {{product.name}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+              <a class="btn btn-primary" [routerLink]="['/productEdit', product.id]"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
               <button (click)="removeProduct(product.id)" class="btn btn-primary" title="Remove {{product.name}}"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
             </td>
           </tr>
