@@ -1,0 +1,49 @@
+<div class="panel panel-primary" *ngIf="product">
+  <div class="panel-heading">
+    {{ pageTitle + ": " + product.name }}
+  </div>
+
+  <div class="panel-body">
+    <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+
+    <div class="row">
+      <div class="col-md-2">Description: </div>
+      <div class="col-md-10">{{ product.desc }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Price: </div>
+      <div class="col-md-10">{{ product.price }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Image URL: </div>
+      <div class="col-md-10">{{ product.imageUrl }}</div>
+    </div>
+    <!--<div class="row">
+      <div class="col-md-2">MPAA Film Rating: </div>
+      <div class="col-md-10">{{ movie.mpaa | uppercase}}</div>
+    </div>-->
+    <div class="row">
+      <div class="col-md-2">Star Rating: </div>
+      <div class="col-md-10">
+        <is-star [rating]="product.starRating"></is-star>
+      </div>
+    </div>
+    <!--<div class="row">
+      <div class="col-md-2">Audience Approval: </div>
+      <div class="col-md-10">{{ movie.approvalRating | percent:'1.0-0' }}</div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">Average DVD Price: </div>
+      <div class="col-md-10">{{ movie.price | currency:'USD':true }}</div>
+    </div>-->
+  </div>
+
+  <div class="panel-footer">
+    <a class="btn btn-default" (click)="onBack()" style="width:80px">
+      <i class="glyphicon glyphicon-chevron-left"></i> Back
+    </a>
+    <a class="btn btn-primary" style="width:80px;margin-left:10px" [routerLink]="['/productEdit', product.id]">
+            Edit
+        </a>
+  </div>
+</div>
