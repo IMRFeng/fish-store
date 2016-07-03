@@ -1,6 +1,6 @@
 # The front-end pages of fish store
 
-Technologies used in this module includes ES6, ReactJS, Babel, Karma, Jasmine, and Webpack etc.
+Technologies used in this module includes ES6, ReactJS, Redux, Babel, Karma, Jasmine, and Webpack etc.
 
 #Prerequisite
 In this module, all of data are fetched from database via RESTful APIs, for more details please refer to [boot-service-api](https://github.com/IVictorFeng/fish-store/tree/master/boot-service-api)
