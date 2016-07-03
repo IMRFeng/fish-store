@@ -36,6 +36,7 @@ export class ProductEditComponent implements OnActivate {
                 'maxlength': 'Product name cannot exceed 50 characters.'
             },
             'price': {
+                'mustNumber': 'The price must be a number',
                 'required': 'Price is required'
             },
             'imageUrl': {
@@ -75,7 +76,10 @@ export class ProductEditComponent implements OnActivate {
                                                                 Validators.maxLength(50)]));
         this.editForm = this._fb.group({
             'name': this.nameControl,
-            'price': [this.product.price, Validators.compose([Validators.required])],
+            'price': [this.product.price, Validators.compose([
+                        NumberValidator.isAValidateNumber(), 
+                        Validators.required])
+                     ],
             'imageUrl': [this.product.imageUrl,
                     Validators.compose([Validators.required,
                     Validators.minLength(5),

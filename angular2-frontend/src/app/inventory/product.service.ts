@@ -54,7 +54,7 @@ export class ProductService {
 
     deleteProductById(id: number) {
         return this._http.delete(`${this._productUrl}/${id}`, { headers: this.headers })
-            .map((response: Response) => <IProduct>response.json())
+            // .map((response: Response) => <IProduct>response.json())
             .catch(this.handleError);
     }
 }
