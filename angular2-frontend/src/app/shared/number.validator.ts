@@ -15,6 +15,15 @@ interface IValidationFunction {
 
 export class NumberValidator {
 
+    static isAValidateNumber(): IValidationFunction {
+        return (control: Control): { [key: string]: boolean } => {
+            if (control.value && (isNaN(control.value))) {
+                return { 'mustNumber': true };
+            }
+            return null;
+        };
+    }
+
     static range(min: number, max: number): IValidationFunction {
         return (control: Control): { [key: string]: boolean } => {
             if (control.value && (isNaN(control.value) || control.value < min || control.value > max)) {
